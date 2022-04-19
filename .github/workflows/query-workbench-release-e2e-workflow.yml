@@ -1,5 +1,6 @@
 name: Query Workbench Release tests workflow in Bundled OpenSearch Dashboards
 on:
+  push:
   pull_request:
     branches:
       - main
