@@ -1,7 +1,8 @@
-node_modules
-cypress/videos/
-cypress/results/
-cypress/screenshots/
+node_modules/
+/cypress/videos/
+/cypress/results/
+/cypress/screenshots/
+/cypress/downloads/
 .DS_Store
 **/.DS_Store
 .idea

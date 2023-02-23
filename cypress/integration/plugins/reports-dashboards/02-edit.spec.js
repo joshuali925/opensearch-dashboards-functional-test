@@ -19,13 +19,15 @@ describe('Cypress', () => {
 
     cy.get('#reportDefinitionDetailsLink').first().click({ force: true });
 
+    cy.wait(12500);
+
     cy.get('#editReportDefinitionButton').should('exist');
 
     cy.get('#editReportDefinitionButton').click();
 
     cy.url().should('include', 'edit');
 
-    cy.wait(1000);
+    cy.wait(12500);
 
     // update the report name
     cy.get('#reportSettingsName').type(' update name');
@@ -33,6 +35,7 @@ describe('Cypress', () => {
     // update report description
     cy.get('#reportSettingsDescription').type(' update description');
 
+    // save changes
     cy.get('#editReportDefinitionButton').click({ force: true });
 
     cy.wait(12500);
