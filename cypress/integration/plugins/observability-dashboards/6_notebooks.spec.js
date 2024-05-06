@@ -6,11 +6,11 @@
 /// <reference types="cypress" />
 
 import {
-  SAMPLE_URL,
   BASE_PATH,
-  delayTime,
   MARKDOWN_TEXT,
   OBSERVABILITY_INDEX_NAME,
+  SAMPLE_URL,
+  delayTime,
 } from '../../../utils/constants';
 
 import { skipOn } from '@cypress/skip-test';
@@ -47,10 +47,9 @@ const makeTestNotebook = () => {
       path: `${OBSERVABILITY_INDEX_NAME}/_refresh`,
       method: 'POST',
     },
-  });
-  cy.reload();
-
-  cy.get('h1[data-test-subj="notebookTitle"]')
+  })
+    .reload()
+    .get('h1[data-test-subj="notebookTitle"]')
     .contains(notebookName)
     .should('exist');
 
